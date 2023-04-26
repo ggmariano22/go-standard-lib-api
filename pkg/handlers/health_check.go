@@ -38,7 +38,7 @@ func (h *HealthCheckHandler) Handle(w http.ResponseWriter, r *http.Request) {
 		"status": "Alive",
 	}
 
-	jsonMessage, err:= json.Marshal(message)
+	jsonMessage, err := json.Marshal(message)
 
 	if err != nil {
 		log.Panic("Erro ao converter mensagem para JSON: ", err)
