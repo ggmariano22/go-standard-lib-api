@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  go-api:
+    image: go-api:latest
+    container_name: go-api
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - "./:/src"
+    ports:
+      - "8080:8080"
+    networks:
+      - go-api
+
+networks:
+  go-api:
+    name: go-api
